@@ -2,31 +2,28 @@ import { useEffect, useState } from 'react'
 import { StopWatchButton } from '../StopWatchButton/StopWatchButton';
 import style from '../StopWatch.module.scss'
 
-export function StopWatchTimer(){
+export function StopWatchTimer({timer, isRunning, setTimer}){
 
 
 
     useEffect(() => {
-        let interval;
+        let interval = 1;
         if (isRunning) {
             interval = setInterval (() => {
                 setTimer(prevTimer => prevTimer + 1);
             }, 1000);
+            
         } else if (!isRunning) {
             clearInterval(interval);
         }
         return() => clearInterval(interval);
-    }, [isRunning]);
-
-
-
-
+    }, [isRunning, timer, setTimer]);
 
     return(
         <>
-        <div>
-            <h1>{timer}s</h1>
+        <div className={style.timerDisplay}>
+            <h2>{timer}s</h2>
         </div>
         </>
-    )
+    );
 }
