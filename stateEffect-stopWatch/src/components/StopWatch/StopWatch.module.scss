@@ -1,0 +1,30 @@
+.containerWatch{
+    margin: auto;
+    margin-top: 20vh;
+    text-align: center;
+    padding: 1rem;
+    width: 30vw;
+    height: 30vh;
+    border: 1px solid black;
+    h1, h2{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+
+}
+
+.startStopButtons{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0.8rem;
+    margin-top: 2rem;
+}
